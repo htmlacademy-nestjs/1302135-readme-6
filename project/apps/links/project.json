@@ -1,0 +1,24 @@
+{
+  "name": "links",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/links/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "links:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "links:build:development"
+        },
+        "production": {
+          "buildTarget": "links:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
